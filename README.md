@@ -5,7 +5,7 @@ Aplicação desenvolvida para a disciplina de Desenvolvimento de Aplicativo Mobi
 ## Aluno
 - Nome: Gabriel Suliano David
 - Matrícula: 25103019
-- Turma: ADS0301M
+
 - Unidade: CG
 
 ## Como executar no computador
