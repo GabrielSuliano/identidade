@@ -5,84 +5,160 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Documento de Entrega - Cartão Digital de Identificação</title>
   <style>
+    * {
+      box-sizing: border-box;
+    }
+    @page {
+      size: A4;
+      margin: 14mm;
+    }
     body {
-      font-family: Arial, Helvetica, sans-serif;
-      margin: 32px;
-      color: #111;
+      font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+      margin: 0;
+      color: #1f2937;
       line-height: 1.5;
+      background: #eef3ff;
     }
-    h1, h2 {
-      margin: 0 0 12px;
+    .container {
+      max-width: 920px;
+      margin: 0 auto;
+      padding: 24px;
     }
-    h1 {
-      font-size: 24px;
-    }
-    h2 {
-      font-size: 18px;
-      margin-top: 24px;
-    }
-    .bloco {
-      border: 1px solid #ddd;
-      border-radius: 8px;
-      padding: 14px 16px;
-      margin-bottom: 14px;
-    }
-    .rotulo {
-      font-weight: bold;
-      display: inline-block;
-      min-width: 110px;
-    }
-    .screenshot {
-      margin-top: 12px;
+    .capa {
+      background: linear-gradient(135deg, #1d4ed8, #2563eb 60%, #3b82f6);
+      color: #fff;
+      border-radius: 16px;
+      padding: 28px;
+      box-shadow: 0 14px 30px rgba(37, 99, 235, 0.2);
       page-break-inside: avoid;
     }
-    .screenshot img {
-      width: 100%;
-      max-width: 1000px;
-      border: 1px solid #ccc;
-      border-radius: 6px;
+    .instituicao {
+      font-size: 12px;
+      letter-spacing: 1.4px;
+      text-transform: uppercase;
+      opacity: 0.95;
+      margin-bottom: 14px;
+    }
+    h1 {
+      margin: 0;
+      font-size: 29px;
+      line-height: 1.2;
+    }
+    .subtitulo {
+      margin-top: 10px;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+    .card {
+      background: #fff;
+      border: 1px solid #d9e2f2;
+      border-radius: 14px;
+      margin-top: 16px;
+      padding: 18px 20px;
+      box-shadow: 0 4px 16px rgba(15, 23, 42, 0.06);
+      page-break-inside: avoid;
+    }
+    h2 {
+      margin: 0 0 12px;
+      color: #0f172a;
+      font-size: 20px;
+    }
+    .dados {
+      display: grid;
+      gap: 8px;
+    }
+    .linha {
+      display: grid;
+      grid-template-columns: 120px 1fr;
+      gap: 8px;
+      align-items: start;
+      padding-bottom: 6px;
+      border-bottom: 1px dashed #dbe3f3;
+    }
+    .linha:last-child {
+      border-bottom: none;
+      padding-bottom: 0;
+    }
+    .rotulo {
+      font-weight: 700;
+      color: #1e3a8a;
+    }
+    .valor {
+      word-break: break-word;
+    }
+    .repo-link {
       display: block;
-      margin-top: 8px;
+      background: #f4f7ff;
+      border: 1px solid #dbe6ff;
+      border-radius: 10px;
+      padding: 12px;
+      color: #1d4ed8;
+      text-decoration: none;
+      font-weight: 600;
+      word-break: break-all;
+    }
+    .captura {
+      margin-top: 14px;
+      page-break-inside: avoid;
+    }
+    .captura h3 {
+      margin: 0 0 10px;
+      font-size: 16px;
+      color: #0f172a;
+    }
+    .captura img {
+      width: 100%;
+      border: 1px solid #d8e0f2;
+      border-radius: 10px;
+      display: block;
     }
     .rodape {
-      margin-top: 28px;
+      margin-top: 14px;
+      text-align: right;
       font-size: 12px;
-      color: #444;
-    }
-    a {
-      color: #0b57d0;
-      text-decoration: none;
-      word-break: break-all;
+      color: #475569;
     }
   </style>
 </head>
 <body>
-  <h1>Documento de Entrega (PDF)</h1>
-  <div class="bloco">
-    <div><span class="rotulo">Nome:</span> Gabriel Suliano David</div>
-    <div><span class="rotulo">Matrícula:</span> 25103019</div>
-    <div><span class="rotulo">Unidade:</span> CG</div>
-    <div><span class="rotulo">Projeto:</span> Cartão Digital de Identificação (Ionic)</div>
-  </div>
+  <main class="container">
+    <section class="capa">
+      <div class="instituicao">Centro Universitário Augusto Motta</div>
+      <h1>Documento de Entrega</h1>
+      <div class="subtitulo">Cartão Digital de Identificação (Ionic)</div>
+    </section>
 
-  <h2>Link do Repositório GitHub</h2>
-  <div class="bloco">
-    <a href="https://github.com/GabrielSuliano/identidade" target="_blank">https://github.com/GabrielSuliano/identidade</a>
-  </div>
+    <section class="card">
+      <h2>Dados do Aluno</h2>
+      <div class="dados">
+        <div class="linha"><div class="rotulo">Nome</div><div class="valor">Gabriel Suliano David</div></div>
+        <div class="linha"><div class="rotulo">Matrícula</div><div class="valor">25103019</div></div>
+        <div class="linha"><div class="rotulo">Unidade</div><div class="valor">CG</div></div>
+      </div>
+    </section>
 
-  <h2>Capturas de Tela da Aplicação</h2>
-  <div class="screenshot">
-    <strong>Tela 1 - Cartão de Identificação</strong>
-    <img src="tela1-home.png" alt="Tela 1 - Cartão de Identificação" />
-  </div>
+    <section class="card">
+      <h2>Link do Repositório GitHub</h2>
+      <a class="repo-link" href="https://github.com/GabrielSuliano/identidade" target="_blank">https://github.com/GabrielSuliano/identidade</a>
+    </section>
 
-  <div class="screenshot">
-    <strong>Tela 2 - Sobre</strong>
-    <img src="tela2-sobre.png" alt="Tela 2 - Sobre" />
-  </div>
+    <section class="card">
+      <h2>Capturas da Aplicação</h2>
 
-  <div class="rodape">
-    Documento gerado para envio conforme instruções da disciplina.
-  </div>
+      <div class="captura">
+        <h3>Tela 1 - Cartão de Identificação</h3>
+        <img src="tela1-home.png" alt="Tela 1 - Cartão de Identificação" />
+      </div>
+
+      <div class="captura">
+        <h3>Tela 2 - Sobre</h3>
+        <img src="tela2-sobre.png" alt="Tela 2 - Sobre" />
+      </div>
+    </section>
+
+    <div class="rodape">
+      Documento gerado para envio no AVA.
+    </div>
+  </main>
 </body>
 </html>
