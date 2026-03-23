@@ -1,0 +1,33 @@
+.pagina-sobre {
+  max-width: 780px;
+  margin: 0 auto;
+  display: grid;
+  gap: 16px;
+}
+
+ion-card {
+  border-radius: 14px;
+}
+
+p {
+  margin: 0;
+  font-size: 1rem;
+  line-height: 1.65;
+}
+
+ion-card-title {
+  font-size: 1.2rem;
+  font-weight: 700;
+}
+
+ion-list {
+  padding: 0 0 6px;
+}
+
+ion-item {
+  --min-height: 52px;
+}
+
+ion-button {
+  margin-top: 4px;
+}

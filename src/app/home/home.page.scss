@@ -1,0 +1,86 @@
+.pagina-identificacao {
+  min-height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.cartao-identificacao {
+  width: 100%;
+  max-width: 680px;
+  border-radius: 18px;
+  overflow: hidden;
+}
+
+.faixa-topo {
+  background: var(--ion-color-primary);
+  color: var(--ion-color-primary-contrast);
+  padding: 18px;
+  text-align: center;
+}
+
+.instituicao {
+  margin: 0;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+}
+
+.tipo-cartao {
+  margin: 6px 0 0;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.bloco-principal {
+  display: grid;
+  grid-template-columns: 130px 1fr;
+  gap: 18px;
+  align-items: center;
+}
+
+.foto-aluno {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid var(--ion-color-light-shade);
+}
+
+.dados-aluno h1 {
+  margin: 0 0 10px;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.dados-aluno p {
+  margin: 4px 0;
+  font-size: 0.95rem;
+}
+
+.lista-dados {
+  margin: 20px 0 14px;
+}
+
+.lista-dados h2 {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 700;
+}
+
+.lista-dados p {
+  margin: 2px 0 0;
+  font-size: 1rem;
+}
+
+ion-button {
+  margin-top: 10px;
+}
+
+@media (max-width: 520px) {
+  .bloco-principal {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    text-align: center;
+  }
+}

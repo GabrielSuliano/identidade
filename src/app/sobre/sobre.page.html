@@ -1,0 +1,46 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Tela 2 - Sobre</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" class="ion-padding">
+  <div class="pagina-sobre">
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Apresentação</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p>{{ textoApresentacao }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Disciplina e objetivo</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content>
+        <p><strong>Disciplina:</strong> {{ disciplina }}</p>
+        <p><strong>Objetivo:</strong> {{ objetivo }}</p>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card>
+      <ion-card-header>
+        <ion-card-title>Competências desenvolvidas</ion-card-title>
+      </ion-card-header>
+
+      <ion-list lines="full">
+        <ion-item *ngFor="let competencia of competencias">
+          <ion-label>{{ competencia }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card>
+
+    <ion-button expand="block" size="large" routerLink="/home" color="primary">
+      Voltar para a Tela 1
+    </ion-button>
+  </div>
+</ion-content>
