@@ -8,8 +8,8 @@ Aplicação desenvolvida para a disciplina de Desenvolvimento de Aplicativo Mobi
 
 - Unidade: CG
 
-## Como executar no computador
-1. Instale o Node.js (versão LTS).
+##  executar no computador
+
 2. Abra o terminal na pasta do projeto.
 3. Execute:
 
