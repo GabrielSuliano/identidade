@@ -36,7 +36,8 @@
 
 /* @import "@ionic/angular/css/palettes/dark.always.css"; */
 /* @import "@ionic/angular/css/palettes/dark.class.css"; */
-@import "@ionic/angular/css/palettes/dark.system.css";
+/* dark.system.css desativado para preservar o tema claro em todos os dispositivos */
+/* @import "@ionic/angular/css/palettes/dark.system.css"; */
 
 html,
 body,

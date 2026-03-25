@@ -46,9 +46,6 @@
 
 .cartao-identificacao {
   animation: subir 620ms ease both;
-}
-
-.cartao-identificacao {
   margin: 0;
   border-radius: 30px;
   overflow: hidden;
@@ -168,7 +165,6 @@ ion-card-content {
 }
 
 @media (max-width: 560px) {
-  .faixa-topo,
   .bloco-principal {
     grid-template-columns: 1fr;
     display: grid;
