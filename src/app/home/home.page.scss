@@ -1,86 +1,201 @@
-.pagina-identificacao {
+.topo-toolbar {
+  --background: rgba(11, 36, 53, 0.9);
+  --color: #f8fafc;
+  --border-color: transparent;
+}
+
+.pagina-home {
+  --background:
+    radial-gradient(circle at top left, rgba(18, 120, 110, 0.2), transparent 28%),
+    radial-gradient(circle at bottom right, rgba(194, 120, 3, 0.14), transparent 30%),
+    linear-gradient(180deg, #f5efe4 0%, #f8f6f1 48%, #eef4f3 100%);
+  position: relative;
+}
+
+.conteudo-home {
+  position: relative;
+  z-index: 1;
   min-height: 100%;
+  max-width: 760px;
+  margin: 0 auto;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
+.fundo-luz {
+  position: absolute;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  filter: blur(18px);
+  opacity: 0.75;
+}
+
+.fundo-luz-esquerda {
+  top: 70px;
+  left: -80px;
+  background: rgba(31, 138, 112, 0.24);
+}
+
+.fundo-luz-direita {
+  right: -70px;
+  bottom: 90px;
+  background: rgba(217, 119, 6, 0.18);
+}
+
 .cartao-identificacao {
-  width: 100%;
-  max-width: 680px;
-  border-radius: 18px;
+  animation: subir 620ms ease both;
+}
+
+.cartao-identificacao {
+  margin: 0;
+  border-radius: 30px;
   overflow: hidden;
+  background: rgba(10, 19, 28, 0.9);
+  color: #f8fafc;
+  box-shadow: 0 26px 70px rgba(15, 23, 42, 0.22);
+  backdrop-filter: blur(10px);
 }
 
 .faixa-topo {
-  background: var(--ion-color-primary);
-  color: var(--ion-color-primary-contrast);
-  padding: 18px;
-  text-align: center;
+  display: flex;
+  justify-content: flex-start;
+  gap: 18px;
+  align-items: flex-start;
+  padding: 22px 24px 0;
 }
 
 .instituicao {
   margin: 0;
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8ee1d1;
 }
 
 .tipo-cartao {
   margin: 6px 0 0;
   font-size: 1rem;
   font-weight: 600;
+  color: rgba(248, 250, 252, 0.82);
 }
 
 .bloco-principal {
   display: grid;
-  grid-template-columns: 130px 1fr;
-  gap: 18px;
+  grid-template-columns: 142px minmax(0, 1fr);
+  gap: 22px;
   align-items: center;
 }
 
 .foto-aluno {
-  width: 130px;
-  height: 130px;
-  border-radius: 50%;
+  width: 142px;
+  height: 142px;
+  border-radius: 28px;
   object-fit: cover;
-  border: 3px solid var(--ion-color-light-shade);
+  border: 3px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.22);
 }
 
-.dados-aluno h1 {
-  margin: 0 0 10px;
-  font-size: 1.5rem;
-  font-weight: 700;
+.dados-aluno h2 {
+  margin: 0 0 12px;
+  font-size: 1.8rem;
+  line-height: 1.08;
 }
 
 .dados-aluno p {
-  margin: 4px 0;
-  font-size: 0.95rem;
+  margin: 5px 0;
+  color: rgba(248, 250, 252, 0.86);
+  font-size: 0.98rem;
 }
 
-.lista-dados {
-  margin: 20px 0 14px;
+.dados-obrigatorios {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+  margin: 24px 0 20px;
 }
 
-.lista-dados h2 {
-  margin: 0;
-  font-size: 0.9rem;
-  font-weight: 700;
+.resumo-item-amplo {
+  grid-column: 1 / -1;
 }
 
-.lista-dados p {
-  margin: 2px 0 0;
-  font-size: 1rem;
+.resumo-item {
+  padding: 15px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
 }
 
-ion-button {
-  margin-top: 10px;
+.resumo-item span {
+  display: block;
+  margin-bottom: 6px;
+  color: rgba(226, 232, 240, 0.7);
+  font-size: 0.8rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
 }
 
-@media (max-width: 520px) {
+.resumo-item strong {
+  font-size: 1.02rem;
+  color: #ffffff;
+}
+
+.botao-principal {
+  margin-top: 26px;
+  --background: linear-gradient(135deg, #f59e0b, #f97316);
+  --background-activated: linear-gradient(135deg, #d97706, #ea580c);
+  --background-hover: linear-gradient(135deg, #f59e0b, #ea580c);
+  --border-radius: 18px;
+  font-weight: 800;
+}
+
+ion-card-content {
+  padding: 24px;
+}
+
+@keyframes subir {
+  from {
+    opacity: 0;
+    transform: translateY(18px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (max-width: 560px) {
+  .faixa-topo,
   .bloco-principal {
     grid-template-columns: 1fr;
+    display: grid;
+  }
+
+  .faixa-topo {
+    padding: 20px 20px 0;
+  }
+
+  .bloco-principal {
     justify-items: center;
     text-align: center;
+  }
+
+  .dados-aluno h2 {
+    font-size: 1.5rem;
+  }
+
+  .dados-obrigatorios {
+    grid-template-columns: 1fr;
+  }
+
+  .resumo-item-amplo {
+    grid-column: auto;
+  }
+
+  ion-card-content {
+    padding: 20px;
   }
 }

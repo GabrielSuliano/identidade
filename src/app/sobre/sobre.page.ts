@@ -7,17 +7,9 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class SobrePage {
-  readonly textoApresentacao =
-    'Sou Gabriel Suliano David, aluno de ADS. Esta aplicação foi desenvolvida no Ionic para apresentar um cartão digital simples e funcional, acessível no navegador do celular e do computador.';
-
-  readonly disciplina = 'Desenvolvimento de Aplicativo Mobile';
-  readonly objetivo =
-    'Aplicar conceitos de interface, organização de projeto e navegação entre telas com foco em usabilidade.';
-
-  readonly competencias = [
-    'Elaborar soluções mobile com Ionic',
-    'Modelar interface com componentes reutilizáveis',
-    'Executar e validar o aplicativo no navegador',
-    'Implementar navegação entre páginas'
-  ];
+  readonly nomeCompleto = 'Gabriel Suliano David';
+  readonly textoSobreMim =
+    'Sou Gabriel Suliano David, estudante de Análise e Desenvolvimento de Sistemas. Gosto de transformar atividades acadêmicas em projetos organizados, funcionais e com apresentação visual mais profissional.';
+  readonly textoDisciplina =
+    'Na disciplina de Desenvolvimento de Aplicativo Mobile, este projeto aplica conceitos de interface, navegação entre telas e uso do Ionic no navegador, seguindo a proposta de criar um cartão digital simples e acessível.';
 }

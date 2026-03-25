@@ -1,33 +1,101 @@
+.topo-toolbar {
+  --background: rgba(11, 36, 53, 0.9);
+  --color: #f8fafc;
+  --border-color: transparent;
+}
+
 .pagina-sobre {
-  max-width: 780px;
+  --background:
+    linear-gradient(180deg, rgba(255, 248, 238, 0.95) 0%, rgba(241, 246, 244, 0.98) 100%),
+    linear-gradient(135deg, #fff7ed 0%, #eff6f5 100%);
+}
+
+.conteudo-sobre {
+  max-width: 760px;
   margin: 0 auto;
-  display: grid;
-  gap: 16px;
+}
+
+.hero-sobre {
+  padding: 20px 0 24px;
+  color: #0f172a;
+  animation: aparecer 580ms ease both;
+}
+
+.etiqueta {
+  display: inline-flex;
+  padding: 8px 14px;
+  border-radius: 999px;
+  background: rgba(217, 119, 6, 0.12);
+  color: #b45309;
+  font-size: 0.82rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.hero-sobre h1 {
+  margin: 16px 0 10px;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  letter-spacing: -0.04em;
+}
+
+.texto-abertura {
+  max-width: 820px;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.8;
+  color: #334155;
 }
 
 ion-card {
-  border-radius: 14px;
+  margin: 0;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid rgba(148, 163, 184, 0.16);
+  box-shadow: 0 22px 50px rgba(15, 23, 42, 0.08);
+  backdrop-filter: blur(10px);
+}
+
+.card-destaque {
+  background: linear-gradient(135deg, rgba(14, 116, 144, 0.92), rgba(15, 118, 110, 0.92));
+  color: #f8fafc;
+}
+
+.card-destaque p,
+.card-destaque ion-card-title {
+  color: #f8fafc;
 }
 
 p {
-  margin: 0;
+  margin: 0 0 10px;
   font-size: 1rem;
-  line-height: 1.65;
+  line-height: 1.7;
 }
 
 ion-card-title {
-  font-size: 1.2rem;
-  font-weight: 700;
+  font-size: 1.18rem;
+  font-weight: 800;
+  color: #0f172a;
 }
 
-ion-list {
-  padding: 0 0 6px;
+.botao-voltar {
+  margin: 22px 0 8px;
+  --background: linear-gradient(135deg, #0f766e, #155e75);
+  --background-hover: linear-gradient(135deg, #0d9488, #0e7490);
+  --background-activated: linear-gradient(135deg, #115e59, #164e63);
+  --border-radius: 18px;
+  font-weight: 800;
 }
 
-ion-item {
-  --min-height: 52px;
+@keyframes aparecer {
+  from {
+    opacity: 0;
+    transform: translateY(14px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-ion-button {
-  margin-top: 4px;
-}

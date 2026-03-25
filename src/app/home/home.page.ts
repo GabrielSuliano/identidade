@@ -7,12 +7,9 @@ import { Component } from '@angular/core';
   standalone: false,
 })
 export class HomePage {
+  readonly instituicao = 'Centro Universitário Augusto Motta';
   readonly nomeCompleto = 'Gabriel Suliano David';
-  readonly matricula = '25103019';
   readonly turma = 'ADS0301M';
   readonly unidade = 'CG';
-  readonly turno = 'Noite';
-  readonly curso = 'Análise e Desenvolvimento de Sistemas';
-  readonly modulo = 'Desenvolvimento de Aplicativo Mobile';
-
+  readonly turno = 'Manhã';
 }

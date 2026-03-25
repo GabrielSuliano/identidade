@@ -1,46 +1,29 @@
 <ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>Tela 2 - Sobre</ion-title>
+  <ion-toolbar class="topo-toolbar">
+    <ion-title>Sobre o Trabalho</ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" class="ion-padding">
-  <div class="pagina-sobre">
-    <ion-card>
+<ion-content [fullscreen]="true" class="pagina-sobre">
+  <div class="conteudo-sobre ion-padding">
+    <section class="hero-sobre">
+      <p class="etiqueta">Tela 2</p>
+      <h1>{{ nomeCompleto }}</h1>
+      <p class="texto-abertura">{{ textoSobreMim }}</p>
+    </section>
+
+    <ion-card class="card-destaque">
       <ion-card-header>
-        <ion-card-title>Apresentação</ion-card-title>
+        <ion-card-title>Sobre a disciplina</ion-card-title>
       </ion-card-header>
 
       <ion-card-content>
-        <p>{{ textoApresentacao }}</p>
+        <p>{{ textoDisciplina }}</p>
       </ion-card-content>
     </ion-card>
 
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Disciplina e objetivo</ion-card-title>
-      </ion-card-header>
-
-      <ion-card-content>
-        <p><strong>Disciplina:</strong> {{ disciplina }}</p>
-        <p><strong>Objetivo:</strong> {{ objetivo }}</p>
-      </ion-card-content>
-    </ion-card>
-
-    <ion-card>
-      <ion-card-header>
-        <ion-card-title>Competências desenvolvidas</ion-card-title>
-      </ion-card-header>
-
-      <ion-list lines="full">
-        <ion-item *ngFor="let competencia of competencias">
-          <ion-label>{{ competencia }}</ion-label>
-        </ion-item>
-      </ion-list>
-    </ion-card>
-
-    <ion-button expand="block" size="large" routerLink="/home" color="primary">
-      Voltar para a Tela 1
+    <ion-button expand="block" size="large" routerLink="/home" class="botao-voltar">
+      Voltar para a tela inicial
     </ion-button>
   </div>
 </ion-content>
