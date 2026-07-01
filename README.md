@@ -1,35 +1,56 @@
-# Cartão Digital de Identificação (Ionic)
+# Cartao Digital de Identificacao
 
-Aplicação desenvolvida para a disciplina de Desenvolvimento de Aplicativo Mobile.
+Aplicativo Ionic/Angular desenvolvido para atividade de Desenvolvimento Mobile. O app apresenta um cartao digital com dados do aluno, foto e uma tela secundaria com breve apresentacao.
 
-Projeto criado com o template Blank do Ionic, conforme o enunciado da atividade.
+## Recursos
 
-## Aluno
-- Nome: Gabriel Suliano David
-- Matrícula: 25103019
+- Tela inicial com cartao de identificacao.
+- Navegacao para uma pagina "Sobre".
+- Layout mobile com componentes Ionic.
+- Foto do aluno em `src/assets/`.
+- Projeto criado a partir do template base do Ionic.
 
-- Unidade: CG
-- Turno: Manhã
+## Stack
 
-##  executar no computador
+- Ionic 8
+- Angular 20
+- TypeScript
+- SCSS
 
-2. Abra o terminal na pasta do projeto.
-3. Execute:
+## Como rodar
 
 ```bash
 npm install
+npm start
+```
+
+Depois abra o endereco exibido no terminal, normalmente:
+
+```text
+http://localhost:4200
+```
+
+Tambem e possivel usar:
+
+```bash
 npx ionic serve
 ```
 
-4. Abra no navegador o endereço exibido no terminal.
+## Estrutura principal
 
-## Estrutura da atividade
-- Tela 1: cartão de identificação com nome, turma, unidade, turno, foto e botão de navegação.
-- Tela 2: breve apresentação sobre o aluno e a disciplina, com botão para voltar à tela inicial.
+```text
+src/app/home/      # Cartao de identificacao
+src/app/sobre/     # Tela de apresentacao
+src/assets/        # Imagens usadas no app
+```
 
-## Telas
-- Tela 1: Cartão de Identificação
-- Tela 2: Sobre
+## Dados da atividade
 
-## Observação
-A navegação entre as telas é feita pelos botões da interface.
+- Aluno: Gabriel Suliano David
+- Matricula: 25103019
+- Unidade: CG
+- Turno: Manha
+
+## Status
+
+Projeto academico funcional para apresentacao de identidade digital em app mobile.
