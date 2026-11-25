@@ -54,3 +54,11 @@ src/assets/        # Imagens usadas no app
 ## Status
 
 Projeto academico funcional para apresentacao de identidade digital em app mobile.
+
+## Arquitetura, requisitos e limites
+
+Atividade acadêmica de interface/navegação: `app-routing.module.ts` carrega módulos `home` e `sobre`; os componentes exibem dados estáticos e imagem em `src/assets/`. Não há autenticação, API, banco ou variáveis necessárias. A duplicidade `src/ambientes/`/`src/environments/` merece revisão; a seleção efetiva é definida em `angular.json`.
+
+Manifest: Angular 20, Ionic 8, TypeScript `~5.9.0`. Use Node compatível com Angular 20 e npm. Prefira `npm ci`, `npm start` e `npm run build`; os scripts Angular não exigem Ionic global.
+
+Há specs Jasmine/Karma; `npm test` executa `ng test`. Não foram executados nesta revisão e não constituem testes de backend. Sem deploy confirmado ou licença versionada. Prioridades: navegação/acessibilidade e revisão de dados pessoais expostos. Apresentar como estudo mobile.
