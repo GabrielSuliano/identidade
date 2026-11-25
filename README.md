@@ -47,7 +47,6 @@ src/assets/        # Imagens usadas no app
 ## Dados da atividade
 
 - Aluno: Gabriel Suliano David
-- Matricula: 25103019
 - Unidade: CG
 - Turno: Manha
 
